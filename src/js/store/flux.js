@@ -17,9 +17,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
             fetchPeope: () => {
-                const URL"https://swapi.dev/api/people/";
+                const URL = "https://swapi.dev/api/people/";
                 const OBJCONFIG = {
-                    method: "GET"
+                    method: "GET",
                     headers: {
                         "Content-type":"application/json"
                     }
@@ -27,7 +27,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
                // const response = 
                 fetch( URL,OBJCONFIG)
-                .then((res)=> res.json() ).
+                .then((res)=> res.json() )
                 .then( (data)=> setStore( {peopleList} ) );
             },
 		
